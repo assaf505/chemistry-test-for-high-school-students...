@@ -874,9 +874,306 @@
     <script>
         // بيانات الأسئلة مع الإجابات الصحيحة والشروح
         const questionsData = [
-            // ... (نفس بيانات الأسئلة الخمسين السابقة)
-            // تم اختصارها هنا لتجنب التكرار الطويل
-            // سيتم وضع جميع الأسئلة الخمسين في التطبيق النهائي
+            {
+                question: "أي مما يلي يُعدّ من حالات المادة الأساسية؟",
+                options: ["البلازما", "الصلبة", "الغروية"],
+                correctAnswer: 1,
+                explanation: "حالات المادة الأساسية هي الصلبة، السائلة، والغازية. البلازما تعتبر حالة رابعة للمادة ولكنها ليست أساسية بنفس درجة الحالات الثلاث الأولى."
+            },
+            {
+                question: "أي خاصية تُميز المادة الصلبة؟",
+                options: ["ليس لها حجم ثابت", "لها شكل ثابت", "تنضغط بسهولة"],
+                correctAnswer: 1,
+                explanation: "المادة الصلبة لها شكل ثابت وحجم ثابت بسبب ترتيب جزيئاتها المنتظم وقوى التماسك القوية بينها."
+            },
+            {
+                question: "أي مما يلي يُعدّ من خصائص السوائل؟",
+                options: ["شكل ثابت", "حجم ثابت", "يمكن ضغطها بشدة"],
+                correctAnswer: 1,
+                explanation: "السوائل لها حجم ثابت ولكن ليس لها شكل ثابت، فهي تأخذ شكل الإناء الذي توضع فيه. كما أن السوائل غير قابلة للانضغاط بشكل كبير."
+            },
+            {
+                question: "الغازات تتميز بأنها؟",
+                options: ["لها شكل وحجم ثابت", "ليس لها شكل أو حجم ثابت", "لا تتحرك جسيماتها"],
+                correctAnswer: 1,
+                explanation: "الغازات ليس لها شكل ثابت ولا حجم ثابت، فهي تملأ الوعاء الذي توجد فيه تماماً. جسيمات الغازات في حركة دائمة وعشوائية."
+            },
+            {
+                question: "أي مما يلي مثال على بخار؟",
+                options: ["بخار الماء", "غاز الأكسجين", "غاز ثاني أكسيد الكربون"],
+                correctAnswer: 0,
+                explanation: "البخار هو الحالة الغازية للمادة عندما تكون في درجة حرارة أقل من نقطة الحرجة. بخار الماء هو المثال الأكثر شيوعاً للبخار."
+            },
+            {
+                question: "أي خاصية يمكن ملاحظتها دون تغيير تركيب المادة؟",
+                options: ["فيزيائية", "كيميائية", "نوية"],
+                correctAnswer: 0,
+                explanation: "الخاصية الفيزيائية يمكن ملاحظتها دون تغيير تركيب المادة، مثل اللون والكثافة. أما الخاصية الكيميائية فتتطلب تغييراً في تركيب المادة."
+            },
+            {
+                question: "أي من الخواص التالية تُعدّ خاصية فيزيائية؟",
+                options: ["الكثافة", "التفاعل مع الأحماض", "الاشتعال"],
+                correctAnswer: 0,
+                explanation: "الكثافة خاصية فيزيائية لأنها تعتمد على كتلة المادة وحجمها دون تغيير تركيبها الكيميائي."
+            },
+            {
+                question: "أي من الخواص التالية تُعدّ خاصية كيميائية؟",
+                options: ["القابلية للاشتعال", "الكتلة", "الطول"],
+                correctAnswer: 0,
+                explanation: "القابلية للاشتعال خاصية كيميائية لأنها تتعلق بقدرة المادة على التفاعل مع الأكسجين وإنتاج مواد جديدة."
+            },
+            {
+                question: "الكثافة تُعدّ من الخواص؟",
+                options: ["الشدة", "الممتدة", "الكيميائية"],
+                correctAnswer: 0,
+                explanation: "الكثافة تعتبر من خواص الشدة لأنها لا تعتمد على كمية المادة، فهي ثابتة لأي عينة من المادة النقية."
+            },
+            {
+                question: "الطول يُعدّ من الخواص:",
+                options: ["نوعية", "كمية", "كيميائية"],
+                correctAnswer: 1,
+                explanation: "الطول يعتبر خاصية كمية لأنه يمكن قياسه ويعتمد على كمية المادة."
+            },
+            {
+                question: "عند إذابة الملح في الماء فإن ذلك:",
+                options: ["تغير فيزيائي", "تغير كيميائي", "إنتاج مادة جديدة"],
+                correctAnswer: 0,
+                explanation: "إذابة الملح في الماء تغير فيزيائي لأنه لا يتغير تركيب الملح أو الماء، ويمكن استرجاع الملح بالتسخين."
+            },
+            {
+                question: "احتراق الخشب يُعدّ:",
+                options: ["تغير فيزيائي", "تغير كيميائي", "تغير شكلي"],
+                correctAnswer: 1,
+                explanation: "احتراق الخشب تغير كيميائي لأنه ينتج مواد جديدة مثل الرماد وثاني أكسيد الكربون ولا يمكن عكس العملية."
+            },
+            {
+                question: "انكسار الزجاج مثال على:",
+                options: ["تغير كيميائي", "تغير فيزيائي", "نموي"],
+                correctAnswer: 1,
+                explanation: "انكسار الزجاج تغير فيزيائي لأنه لا يتغير تركيب الزجاج، فقط يتغير شكله."
+            },
+            {
+                question: "صدأ الحديد يُمثل:",
+                options: ["تغير فيزيائي", "تغير كيميائي", "خاصية فيزيائية"],
+                correctAnswer: 1,
+                explanation: "صدأ الحديد تغير كيميائي لأنه يتفاعل الحديد مع الأكسجين والماء مكوناً مادة جديدة هي أكسيد الحديد."
+            },
+            {
+                question: "تبخر الماء مثال على:",
+                options: ["تغير كيميائي", "تغير فيزيائي", "لا تغير"],
+                correctAnswer: 1,
+                explanation: "تبخر الماء تغير فيزيائي لأنه تحول من الحالة السائلة إلى الغازية دون تغيير تركيب الماء."
+            },
+            {
+                question: "قلي البيض يُعدّ:",
+                options: ["تغير فيزيائي", "تغير كيميائي", "انصهار"],
+                correctAnswer: 1,
+                explanation: "قلي البيض تغير كيميائي لأنه يتغير تركيب البروتينات في البيض ولا يمكن عكس العملية."
+            },
+            {
+                question: "تخمر العسل يُعتبر:",
+                options: ["تغير فيزيائي", "تغير كيميائي", "تغير شكلي"],
+                correctAnswer: 1,
+                explanation: "التخمر تغير كيميائي لأنه ينتج مواد جديدة مثل الكحول وثاني أكسيد الكربون."
+            },
+            {
+                question: "أي عامل يؤثر في حالة المادة؟",
+                options: ["درجة الحرارة", "اللون", "الطول"],
+                correctAnswer: 0,
+                explanation: "درجة الحرارة تؤثر على حالة المادة، فبزيادتها تتحول المواد من الصلبة إلى السائلة إلى الغازية."
+            },
+            {
+                question: "عند تسخين الجليد فإنه يتحول إلى:",
+                options: ["غاز", "سائل", "صلب آخر"],
+                correctAnswer: 1,
+                explanation: "عند تسخين الجليد يتحول إلى ماء سائل في عملية تسمى الانصهار."
+            },
+            {
+                question: "عملية تحول المادة من صلب إلى سائل تسمى:",
+                options: ["تبخر", "انصهار", "تكثف"],
+                correctAnswer: 1,
+                explanation: "عملية تحول المادة من الصلبة إلى السائلة تسمى الانصهار."
+            },
+            {
+                question: "تحول الغاز إلى سائل يسمى:",
+                options: ["تبخر", "انصهار", "تكثف"],
+                correctAnswer: 2,
+                explanation: "تحول الغاز إلى سائل يسمى التكثف."
+            },
+            {
+                question: "العملية التي تتحول فيها المادة الصلبة مباشرة إلى غاز:",
+                options: ["ترشيح", "تسام", "تبلور"],
+                correctAnswer: 1,
+                explanation: "عملية تحول المادة الصلبة مباشرة إلى غاز تسمى التسامي."
+            },
+            {
+                question: "أي خاصية تعتمد على كمية المادة؟",
+                options: ["الحجم", "الكثافة", "اللون"],
+                correctAnswer: 0,
+                explanation: "الحجم خاصية ممتدة تعتمد على كمية المادة، بينما الكثافة واللون خواص شدة لا تعتمد على الكمية."
+            },
+            {
+                question: "الكتلة يُعتبر خاصية:",
+                options: ["ممتدة", "نوعية", "كيميائية"],
+                correctAnswer: 0,
+                explanation: "الكتلة خاصية ممتدة لأنها تعتمد على كمية المادة."
+            },
+            {
+                question: "اللون يُعتبر خاصية:",
+                options: ["كيميائية", "نوعية", "ممتدة"],
+                correctAnswer: 1,
+                explanation: "اللون خاصية نوعية لأنه يصف نوع المادة ولا يعتمد على كميتها."
+            },
+            {
+                question: "الخاصية التي لا تتغير بتغير كمية المادة:",
+                options: ["الحجم", "الكثافة", "الكتلة"],
+                correctAnswer: 1,
+                explanation: "الكثافة خاصية شدة لا تتغير بتغير كمية المادة."
+            },
+            {
+                question: "الشمع عند درجة حرارة الغرفة يُعتبر مادة:",
+                options: ["صلبة", "سائلة", "غازية"],
+                correctAnswer: 0,
+                explanation: "الشمع عند درجة حرارة الغرفة مادة صلبة."
+            },
+            {
+                question: "الخشب يطفو على الماء لأن:",
+                options: ["كثافته أقل من كثافة الماء", "حجمه كبير", "وزنه صغير"],
+                correctAnswer: 0,
+                explanation: "الخشب يطفو على الماء لأن كثافته أقل من كثافة الماء."
+            },
+            {
+                question: "عند تجمد الماء فإن حجمه:",
+                options: ["يزداد", "ينقص", "يبقى ثابتاً"],
+                correctAnswer: 0,
+                explanation: "عند تجمد الماء يزداد حجمه، وهذا من الخصائص الفريدة للماء."
+            },
+            {
+                question: "النحاس موصل جيد للكهرباء، وهذا مثال على خاصية:",
+                options: ["كيميائية", "فيزيائية", "نووية"],
+                correctAnswer: 1,
+                explanation: "التوصيل الكهربائي خاصية فيزيائية."
+            },
+            {
+                question: "حشوة الأسنان غالبًا ما تصنع من:",
+                options: ["عنصر", "مركب", "محلول"],
+                correctAnswer: 2,
+                explanation: "حشوة الأسنان غالبًا ما تصنع من محلول صلب (ملغم) من الفضة والقصدير والزئبق."
+            },
+            {
+                question: "سبيكة الحديد والنحاس تُعتبر:",
+                options: ["محلول صلب-صلب", "محلول سائل-صلب", "محلول سائل-سائل"],
+                correctAnswer: 0,
+                explanation: "سبيكة الحديد والنحاس تعتبر محلول صلب-صلب."
+            },
+            {
+                question: "عند التحليل الكهربائي للماء تكون نسبة الهيدروجين إلى الأكسجين:",
+                options: ["1:1", "2:1", "3:1"],
+                correctAnswer: 1,
+                explanation: "عند التحليل الكهربائي للماء تكون نسبة الهيدروجين إلى الأكسجين 2:1."
+            },
+            {
+                question: "تفاعل الصوديوم مع الماء مثال على:",
+                options: ["تغير فيزيائي", "تغير كيميائي", "لا تغير"],
+                correctAnswer: 1,
+                explanation: "تفاعل الصوديوم مع الماء تغير كيميائي لأنه ينتج هيدروكسيد الصوديوم وهيدروجين."
+            },
+            {
+                question: "عند غليان الماء فإنه:",
+                options: ["يتغير تركيبه", "يتغير حالته فقط", "يتكون مركب جديد"],
+                correctAnswer: 1,
+                explanation: "عند غليان الماء يتغير حالته فقط من سائل إلى غاز دون تغيير تركيبه."
+            },
+            {
+                question: "القانون الذي يفسر ثبات الكتلة في التفاعلات:",
+                options: ["قانون النسب الثابتة", "قانون حفظ الكتلة", "قانون النسب المتضاعفة"],
+                correctAnswer: 1,
+                explanation: "قانون حفظ الكتلة ينص على أن الكتلة لا تفنى ولا تستحدث في التفاعلات الكيميائية."
+            },
+            {
+                question: "قانون النسب الثابتة هو:",
+                options: ["CO و CO₂", "حفظ الكتلة", "النسب المتضاعفة"],
+                correctAnswer: 0,
+                explanation: "قانون النسب الثابتة ينص على أن المركب الكيميائي النقي يتكون من نفس العناصر بنفس النسب المئوية بالكتلة."
+            },
+            {
+                question: "التغير الفيزيائي يتميز ب:",
+                options: ["عدم تكوين مادة جديدة", "تكوين مادة جديدة", "إنتاج حرارة دائمًا"],
+                correctAnswer: 0,
+                explanation: "التغير الفيزيائي يتميز بعدم تكوين مواد جديدة."
+            },
+            {
+                question: "أي مما يلي دليل على حدوث تغير كيميائي؟",
+                options: ["انكسار الشكل", "تغير اللون", "التبخر"],
+                correctAnswer: 1,
+                explanation: "تغير اللون دليل على حدوث تغير كيميائي لأنه يشير إلى تكون مواد جديدة."
+            },
+            {
+                question: "تكوين رائحة جديدة أثناء التفاعل دليل على:",
+                options: ["تغير فيزيائي", "تغير كيميائي", "تغير"],
+                correctAnswer: 1,
+                explanation: "تكوين رائحة جديدة دليل على حدوث تغير كيميائي وتكون مواد جديدة."
+            },
+            {
+                question: "إذا تفاعل 16.6g من المغنيسيوم مع 10g من الأكسجين تكون كتلة الناتج:",
+                options: ["6.6g", "26.6g", "106.6g"],
+                correctAnswer: 1,
+                explanation: "حسب قانون حفظ الكتلة، كتلة الناتج = 16.6 + 10 = 26.6g"
+            },
+            {
+                question: "عينة كتلتها 100g من مركب تحتوي على 20g هيدروجين، النسبة المئوية للهيدروجين =",
+                options: ["11%", "21%", "31%"],
+                correctAnswer: 1,
+                explanation: "النسبة المئوية = (20/100) × 100 = 20%"
+            },
+            {
+                question: "مركب يحتوي على 1g هيدروجين و 19g أكسجين، النسبة المئوية للهيدروجين =",
+                options: ["1%", "5%", "95%"],
+                correctAnswer: 1,
+                explanation: "النسبة المئوية = (1/20) × 100 = 5%"
+            },
+            {
+                question: "أيّ من الخواص التالية لا يمكن ملاحظتها مباشرة؟",
+                options: ["الكثافة", "اللون", "الشكل"],
+                correctAnswer: 0,
+                explanation: "الكثافة لا يمكن ملاحظتها مباشرة بل يجب حسابها من الكتلة والحجم."
+            },
+            {
+                question: "أيّ من التغيرات التالية لا يُعدّ كيميائيًا؟",
+                options: ["التبخر", "الاحتراق", "الصدأ"],
+                correctAnswer: 0,
+                explanation: "التبخر تغير فيزيائي وليس كيميائيًا."
+            },
+            {
+                question: "عند تفاعل الحديد مع الكبريت لتكوين كبريتيد الحديد يحدث:",
+                options: ["تغير فيزيائي", "تغير كيميائي", "تغير"],
+                correctAnswer: 1,
+                explanation: "تفاعل الحديد مع الكبريت تغير كيميائي لأنه ينتج مادة جديدة هي كبريتيد الحديد."
+            },
+            {
+                question: "أيّ مما يلي يُعتبر تغيرًا فيزيائيًا عكسيًا؟",
+                options: ["ذوبان الثلج", "احتراق الفحم", "صدأ الحديد"],
+                correctAnswer: 0,
+                explanation: "ذوبان الثلج تغير فيزيائي عكسي لأنه يمكن عكس العملية بتجميد الماء."
+            },
+            {
+                question: "الخاصية التي تحدد قدرة المادة على التفاعل مع الأحماض:",
+                options: ["كيميائية", "فيزيائية", "ممتدة"],
+                correctAnswer: 0,
+                explanation: "قدرة المادة على التفاعل مع الأحماض خاصية كيميائية."
+            },
+            {
+                question: "أي من الحالات التالية لها جسيمات متقاربة جدًا؟",
+                options: ["الصلب", "السائل", "الغاز"],
+                correctAnswer: 0,
+                explanation: "في الحالة الصلبة تكون الجسيمات متقاربة جدًا ومرتبة في مواقع ثابتة."
+            },
+            {
+                question: "أي من الحالات التالية لها جسيمات متباعدة جدًا؟",
+                options: ["الصلب", "السائل", "الغاز"],
+                correctAnswer: 2,
+                explanation: "في الحالة الغازية تكون الجسيمات متباعدة جدًا وتتحرك بحرية."
+            }
         ];
 
         // متغيرات التطبيق
@@ -1046,8 +1343,215 @@
             }
         }
 
-        // ... (بقية الدوال كما هي في الكود السابق)
-        // سيتم وضع جميع الدوال المتبقية هنا
+        // عرض السؤال الحالي
+        function showQuestion() {
+            const question = questions[currentQuestion];
+            
+            // تحديث رقم السؤال
+            questionNumberElement.textContent = `السؤال ${currentQuestion + 1} من ${questions.length}`;
+            
+            // تحديث نص السؤال
+            questionTextElement.textContent = question.question;
+            
+            // مسح الخيارات السابقة
+            optionsContainer.innerHTML = '';
+            
+            // إضافة الخيارات الجديدة
+            question.options.forEach((option, index) => {
+                const optionElement = document.createElement('div');
+                optionElement.classList.add('option');
+                
+                // تحديد إذا كان الخيار مختارًا
+                if (userAnswers[currentQuestion] === index) {
+                    optionElement.classList.add('selected');
+                    
+                    // إضافة فئة للإجابة الصحيحة أو الخاطئة
+                    if (index === question.correctAnswer) {
+                        optionElement.classList.add('correct');
+                    } else {
+                        optionElement.classList.add('incorrect');
+                    }
+                }
+                
+                // إذا تمت الإجابة على هذا السؤال، جعل الخيارات غير قابلة للتحديد
+                if (answeredQuestions.has(currentQuestion)) {
+                    optionElement.classList.add('answered');
+                }
+                
+                const radioId = `option-${currentQuestion}-${index}`;
+                optionElement.innerHTML = `
+                    <input type="radio" id="${radioId}" name="question-${currentQuestion}" value="${index}" ${answeredQuestions.has(currentQuestion) ? 'disabled' : ''}>
+                    <label for="${radioId}">
+                        ${option}
+                        <span class="option-letter">${String.fromCharCode(65 + index)}</span>
+                    </label>
+                `;
+                
+                // فقط إذا لم يتم الإجابة على السؤال، أضف مستمع الحدث
+                if (!answeredQuestions.has(currentQuestion)) {
+                    optionElement.addEventListener('click', () => selectOption(index));
+                }
+                
+                optionsContainer.appendChild(optionElement);
+            });
+            
+            // تحديث الشرح - إظهاره فقط إذا تمت الإجابة على السؤال
+            if (answeredQuestions.has(currentQuestion)) {
+                explanationTextElement.textContent = question.explanation;
+                explanationElement.style.display = 'block';
+            } else {
+                explanationElement.style.display = 'none';
+            }
+            
+            // تحديث حالة الأزرار
+            prevButton.disabled = currentQuestion === 0;
+            nextButton.disabled = !answeredQuestions.has(currentQuestion) && userAnswers[currentQuestion] === null;
+            
+            // إظهار زر إنهاء الاختبار في السؤال الأخير
+            if (currentQuestion === questions.length - 1) {
+                nextButton.style.display = 'none';
+                submitButton.style.display = 'flex';
+                submitButton.disabled = !answeredQuestions.has(currentQuestion);
+            } else {
+                nextButton.style.display = 'flex';
+                submitButton.style.display = 'none';
+            }
+            
+            // إخفاء التغذية الراجعة
+            feedbackElement.style.display = 'none';
+            
+            // تحديث متتبع الأسئلة
+            updateQuestionsTracker();
+        }
+
+        // اختيار خيار
+        function selectOption(optionIndex) {
+            // إلغاء تحديد جميع الخيارات
+            document.querySelectorAll('.option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            
+            // تحديد الخيار المختار
+            userAnswers[currentQuestion] = optionIndex;
+            document.querySelectorAll('.option')[optionIndex].classList.add('selected');
+            
+            // إضافة السؤال إلى مجموعة الأسئلة المجابة
+            answeredQuestions.add(currentQuestion);
+            
+            // تحديث حالة الأزرار
+            nextButton.disabled = false;
+            if (currentQuestion === questions.length - 1) {
+                submitButton.disabled = false;
+            }
+            
+            // التحقق من الإجابة
+            const question = questions[currentQuestion];
+            const isCorrect = optionIndex === question.correctAnswer;
+            
+            // عرض التغذية الراجعة
+            feedbackElement.textContent = isCorrect ? 
+                "إجابة صحيحة! أحسنت!" : 
+                "إجابة خاطئة. حاول مرة أخرى في السؤال التالي!";
+            feedbackElement.className = `feedback ${isCorrect ? 'correct' : 'incorrect'}`;
+            feedbackElement.style.display = 'block';
+            
+            // إظهار الشرح بعد الإجابة
+            explanationTextElement.textContent = question.explanation;
+            explanationElement.style.display = 'block';
+            
+            // إعادة تحميل السؤال لتطبيق التغييرات
+            showQuestion();
+        }
+
+        // الانتقال إلى السؤال التالي
+        function nextQuestion() {
+            if (currentQuestion < questions.length - 1) {
+                currentQuestion++;
+                showQuestion();
+                updateProgressBar();
+            }
+        }
+
+        // الانتقال إلى السؤال السابق
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                showQuestion();
+                updateProgressBar();
+            }
+        }
+
+        // تحديث شريط التقدم
+        function updateProgressBar() {
+            const progress = ((currentQuestion + 1) / questions.length) * 100;
+            progressBar.style.width = `${progress}%`;
+        }
+
+        // إنهاء الاختبار وعرض النتيجة
+        function submitQuiz() {
+            clearInterval(timer);
+            
+            // حساب النتيجة النهائية
+            let finalScore = 0;
+            userAnswers.forEach((answer, index) => {
+                if (answer === questions[index].correctAnswer) {
+                    finalScore++;
+                }
+            });
+            
+            // عرض معلومات الطالب
+            resultNameElement.textContent = studentName;
+            resultClassElement.textContent = studentClass;
+            
+            // عرض النتيجة
+            scoreElement.textContent = `${finalScore}/${questions.length}`;
+            scoreDetailsElement.textContent = `أجبت بشكل صحيح على ${finalScore} من أصل ${questions.length} سؤال`;
+            
+            // نص النتيجة بناءً على الأداء
+            let scoreText = "";
+            const percentage = (finalScore / questions.length) * 100;
+            
+            if (percentage >= 90) {
+                scoreText = "ممتاز! أداء رائع! أنت على مستوى عالٍ من المعرفة الكيميائية.";
+            } else if (percentage >= 80) {
+                scoreText = "جيد جداً! أحسنت! لديك فهم قوي للمفاهيم الكيميائية.";
+            } else if (percentage >= 70) {
+                scoreText = "جيد! يمكنك التحسين أكثر بمراجعة بعض النقاط.";
+            } else if (percentage >= 60) {
+                scoreText = "مقبول. تحتاج للمزيد من الدراسة والمراجعة.";
+            } else {
+                scoreText = "ضعيف. يجب مراجعة المادة مرة أخرى والتركيز على المفاهيم الأساسية.";
+            }
+            
+            scoreTextElement.textContent = scoreText;
+            
+            // إخفاء واجهة الاختبار وإظهار النتيجة
+            quizContainer.style.display = 'none';
+            resultContainer.style.display = 'block';
+        }
+
+        // إعادة بدء الاختبار
+        function restartQuiz() {
+            // إعادة تعيين المتغيرات
+            shuffleQuestions();
+            userAnswers = new Array(questions.length).fill(null);
+            currentQuestion = 0;
+            score = 0;
+            answeredQuestions.clear();
+            timeLeft = 45 * 60;
+            
+            // إعادة تعيين الواجهة
+            infoContainer.style.display = 'block';
+            quizContainer.style.display = 'none';
+            resultContainer.style.display = 'none';
+            
+            // إعادة تعيين النموذج
+            document.getElementById('student-name').value = "";
+            document.getElementById('student-class').value = "";
+            
+            // إعادة تعيين المؤقت
+            updateTimerDisplay();
+        }
 
         // إضافة مستمعي الأحداث
         startButton.addEventListener('click', startQuiz);
